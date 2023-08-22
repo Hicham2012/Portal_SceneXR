@@ -25,4 +25,5 @@ The background music is from Final Fantasy and the sound effect when tapping on 
 # Tips and Tricks
 Wear headphones for an amazing experience. 
 
+# Contact
 Feel free to reach out to me to explore new ideas on my [LinkedIn](https://www.linkedin.com/in/hicham-zaadla/)
