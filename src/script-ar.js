@@ -1,6 +1,5 @@
 import * as dat from 'lil-gui'
 import * as THREE from 'three'
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js'
 import { DRACOLoader } from 'three/examples/jsm/loaders/DRACOLoader.js'
 import firefliesVertexShader from './shaders/fireflies/vertex.glsl'
@@ -12,6 +11,7 @@ import gsap from 'gsap'
 // move it's position each time you tap
 
 import { ARButton } from "https://unpkg.com/three@0.133.0/examples/jsm/webxr/ARButton.js";
+// mobileDebug();
 
 let container;
 let camera, scene, renderer;
@@ -31,6 +31,7 @@ const positionOfAudioAndSphere = { x: 0, y: 0, z: -0.5 };
 
 init();
 animate();
+
 
 function mobileDebug() {
     const containerER = document.getElementById('console-ui')
@@ -86,6 +87,14 @@ function init() {
     });
     document.body.appendChild(button);
     renderer.domElement.style.display = "none";
+
+    /**
+     * Sizes
+     */
+    const sizes = {
+        width: window.innerWidth,
+        height: window.innerHeight
+    }
 
     window.addEventListener("resize", () => {
         // Update sizes
@@ -266,13 +275,6 @@ function onSelect() {
     }
 }
 
-function onWindowResize() {
-    camera.aspect = window.innerWidth / window.innerHeight;
-    camera.updateProjectionMatrix();
-
-    renderer.setSize(window.innerWidth, window.innerHeight);
-}
-
 function animate() {
     renderer.setAnimationLoop(render);
 }
@@ -387,7 +389,6 @@ function render(timestamp, frame) {
                     // portalLightMaterial.uniforms.uColorStart.value.set('blue'); // change the color of the cube to white
 
                     savedIntersectedObject = intersectObject.object; // save a reference of the last intersected object
-                    console.log(savedIntersectedObject)
                 }
             }
         } else {
@@ -431,15 +432,6 @@ function setupAudioScene() {
     audioIsInitialized = true;
     playAudio();
 }
-
-// function createSphere() {
-//     // // create an object for the sound to play from
-//     const sphere = new THREE.SphereBufferGeometry(0.2, 32, 16);
-//     const material = new THREE.MeshPhongMaterial({ color: 0xff2200 });
-//     const mesh = new THREE.Mesh(sphere, material);
-//     mesh.position.set(positionOfAudioAndSphere.x, positionOfAudioAndSphere.y, positionOfAudioAndSphere.z);
-//     scene.add(mesh);
-// }
 
 // Create an AudioContext
 // Can only do so AFTER user does a gesture (like a click) on the page
