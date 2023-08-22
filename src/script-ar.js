@@ -11,13 +11,13 @@ import gsap from 'gsap'
 // move it's position each time you tap
 
 import { ARButton } from "https://unpkg.com/three@0.133.0/examples/jsm/webxr/ARButton.js";
-// mobileDebug();
+mobileDebug();
 
 let container;
 let camera, scene, renderer;
 let reticle;
 let controller;
-let model; // save a reference to model
+let model;
 let portalLightMesh;
 let portalLightMaterial;
 let raycaster;
@@ -84,9 +84,14 @@ function init() {
         domOverlay: {
             root: document.body,
         }
+
     });
     document.body.appendChild(button);
     renderer.domElement.style.display = "none";
+    button.addEventListener('click', () => {
+        const text = document.getElementById('text')
+        text.style.display = 'none'
+    })
 
     /**
      * Sizes
@@ -231,6 +236,9 @@ function addReticleToScene() {
     scene.add(reticle);
 }
 
+// After tapping on the white recticle function
+// we will make model and fireflies visible while
+// hidding the recticle
 function onSelect() {
     if (reticle.visible && model) {
         model.visible = true; // make sure we set the model to visible
@@ -315,6 +323,7 @@ async function initializeHitTestSource() {
     session.addEventListener("end", () => {
         hitTestSourceInitialized = false;
         hitTestSource = null;
+        location.reload()
     });
 }
 
@@ -410,9 +419,9 @@ function render(timestamp, frame) {
     }
 }
 
-/***************************/
-/* Spatial Audio section */
-/***************************/
+/**
+ * Spatial Audio
+ */
 
 let audioElement;
 let audioContext;
@@ -539,9 +548,9 @@ function playSoundEffect() {
     soundEffectElement.play()
 }
 
-/*******************/
-/* Helper functions */
-/*******************/
+/**
+ * Helper functions
+ */
 
 
 function getCameraPosition() {
@@ -582,9 +591,9 @@ function createVectorXDistanceAwayFromCamera(distanceFromCamera) {
     return vector;
 }
 
-/*******************/
-/* Raycast line helper = a line to visualize the raycast. Totally optional */
-/*******************/
+
+// Raycast line helper
+// a line to visualize the raycast.
 
 function createRaycastLine() {
     const lineMaterial = new THREE.LineBasicMaterial({ color: 0xffffff });
