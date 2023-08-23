@@ -4,7 +4,7 @@
 Since big browsers are still in the work of adopting XR support, we will need to use other browsers that are supporting it.<br />
 1. For our case, we will use WebXR Viewer by Modzilla.
 2. Make sure to download it on PlayStore or AppStore.
-3. Open the browser and visit our website at `https://portal-scene-xr.vercel.app/`.
+3. Open the browser and visit the website at `https://portal-scene-xr.vercel.app/`.
 
 ![IMG_8804](https://github.com/Hicham2012/Portal_SceneXR/assets/99765449/fdcd6e47-3029-46dd-bfd6-90ae5ae51b08)
 
