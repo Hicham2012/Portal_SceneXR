@@ -17,6 +17,7 @@ For this experiment, I focused on achieving the necessary results by using:
  - CSS
  - Javascript
  - [Three.js](https://threejs.org/) (for 3D objects and animation along with raycasting)
+ - GSAP (for animation)
  - [WebXR](https://github.com/immersive-web) (for implementing AR and VR experience)
  - [Eruda](https://eruda.liriliri.io/) (for mobile debugging)
  - [Resonance Audio](https://resonance-audio.github.io/resonance-audio/)
