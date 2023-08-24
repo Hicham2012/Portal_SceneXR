@@ -8,7 +8,7 @@
 # Preview
 ![IMG_8803](https://github.com/Hicham2012/Portal_SceneXR/assets/99765449/36c57b8f-1002-4824-bc17-64b1dee26b33)
 
-View the working video <a href="https://www.linkedin.com/posts/hicham-zaadla_finished-my-first-experiment-on-webxr-as-activity-7099901493876514817-Ga69?utm_source=share&utm_medium=member_desktop" target="_blank">here</a>
+View the working video [here](https://www.linkedin.com/posts/hicham-zaadla_finished-my-first-experiment-on-webxr-as-activity-7099901493876514817-Ga69?utm_source=share&utm_medium=member_desktop)
 # Running the website
 Since big browsers are still in the work of adopting XR support, we will need to use other browsers that are supporting it.<br />
 1. For our case, we will use WebXR Viewer by Modzilla.
