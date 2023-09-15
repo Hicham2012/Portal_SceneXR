@@ -4,6 +4,7 @@
  3. [Technologies and Features](#technologies-and-features)
  4. [Credits](#credits)
  5. [Tips and Tricks](#tips-and-tricks)
+ 6. [Contact](#contact)
 
 # Preview
 ![IMG_8803](https://github.com/Hicham2012/Portal_SceneXR/assets/99765449/36c57b8f-1002-4824-bc17-64b1dee26b33)
