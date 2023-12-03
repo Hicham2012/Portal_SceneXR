@@ -7,9 +7,6 @@ import firefliesFragmentShader from './shaders/fireflies/fragment.glsl'
 import portalVertexShader from './shaders/portal/vertex.glsl'
 import portalFragmentShader from './shaders/portal/fragment.glsl'
 import gsap from 'gsap'
-// In this example you should be able to place a glb model on the floor and then
-// move it's position each time you tap
-
 import { ARButton } from "https://unpkg.com/three@0.133.0/examples/jsm/webxr/ARButton.js";
 mobileDebug();
 
